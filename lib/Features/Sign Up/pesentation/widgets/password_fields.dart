@@ -6,17 +6,12 @@ import 'package:test_app/Features/Log%20In/pesentation/widgets/coustom_Textform_
 import 'package:test_app/core/utils/images.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
-class PassWordFieled extends StatefulWidget {
+class PassWordFieled extends StatelessWidget {
   const PassWordFieled({super.key});
 
   @override
-  State<PassWordFieled> createState() => _PassWordFieledState();
-}
-
-class _PassWordFieledState extends State<PassWordFieled> {
-  bool obscuretext = true;
-  @override
   Widget build(BuildContext context) {
+    bool obscuretext = true;
     return CoustomTextFormField(
       obscuretext: obscuretext,
       suffix: GestureDetector(

@@ -23,8 +23,12 @@ class SignUpViewBody extends StatelessWidget {
     return BlocConsumer<SignUpBloc, SignUpState>(
       listener: (context, state) {
         if (state is SignUpLoading) {
+          BlocProvider.of<SignUpBloc>(context).modalprogresshud = true;
         } else if (state is SignUpSucsess) {
+          BlocProvider.of<SignUpBloc>(context).modalprogresshud = false;
         } else {
+          BlocProvider.of<SignUpBloc>(context).modalprogresshud = false;
+
           print("error from sami");
         }
       },
@@ -66,7 +70,7 @@ class SignUpViewBody extends StatelessWidget {
                 CoustomBoutton(
                   onPressed: () async {
                     BlocProvider.of<SignUpBloc>(context)
-                        .add(SignUp(email: email, password: password));
+                        .add(SignUpEvent(email: email, password: password));
                   },
                   minwidth: 330,
                   textbutton: "Sign Up",

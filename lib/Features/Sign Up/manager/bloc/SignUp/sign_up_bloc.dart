@@ -5,18 +5,19 @@ import 'package:flutter/material.dart';
 part 'sign_up_event.dart';
 part 'sign_up_state.dart';
 
-class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
+class SignUpBloc extends Bloc<AuthEvent, SignUpState> {
+  bool modalprogresshud = false;
   SignUpBloc() : super(SignUpInitial()) {
-    on<SignUpEvent>((event, emit) async {
-      if (event is SignUp) {
+    on<AuthEvent>((event, emit) async {
+      if (event is SignUpEvent) {
         try {
-          emit(SignUpLoading());
+          modalprogresshud = true;
           // ignore: unused_local_variable
-          final credential =
-              await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: event.email!,
             password: event.password!,
           );
+          modalprogresshud = false;
           emit(SignUpSucsess());
         } on FirebaseAuthException catch (e) {
           if (e.code == 'weak-password') {
@@ -27,7 +28,9 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
             print('The account already exists for that email.');
           }
           emit(SignUpFailure());
+          modalprogresshud = false;
         } catch (e) {
+          // ignore: avoid_print
           print(e);
         }
       }

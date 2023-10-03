@@ -3,10 +3,10 @@
 part of 'sign_up_bloc.dart';
 
 @immutable
-abstract class SignUpEvent {}
+abstract class AuthEvent {}
 
-class SignUp extends SignUpEvent {
+class SignUpEvent extends AuthEvent {
   String? email;
   String? password;
-  SignUp({required this.email, required this.password});
+  SignUpEvent({required this.email, required this.password});
 }
