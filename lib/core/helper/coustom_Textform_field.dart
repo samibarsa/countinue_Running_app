@@ -8,16 +8,19 @@ class CoustomTextFormField extends StatelessWidget {
       required this.hinttext,
       required this.hintStyle,
       this.suffix,
-      this.obscuretext = false});
+      this.obscuretext = false,
+      required this.onChanged});
   final String hinttext;
   final TextStyle? hintStyle;
   final Widget? suffix;
   final bool obscuretext;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 56,
       child: TextFormField(
+        onChanged: onChanged,
         obscureText: obscuretext,
         decoration: InputDecoration(
             suffix: suffix,

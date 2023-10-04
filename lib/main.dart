@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_app/Features/Sign%20Up/manager/bloc/SignUp/sign_up_bloc.dart';
+import 'package:test_app/Features/auth/manager/bloc/SignUp/sign_up_bloc.dart';
 import 'package:test_app/core/manager/cubit/refresh/refresh_cubit.dart';
 import 'package:test_app/core/utils/constant.dart';
 import 'package:test_app/core/utils/router.dart';

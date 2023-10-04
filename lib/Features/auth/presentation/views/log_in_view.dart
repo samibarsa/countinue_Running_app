@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/log_in_view_body.dart';
+import 'package:test_app/Features/auth/presentation/body/auth_view_body.dart';
 import 'package:test_app/core/utils/constant.dart';
 
 class LogInView extends StatelessWidget {
@@ -19,7 +19,13 @@ class LogInView extends StatelessWidget {
           },
         ),
       ),
-      body: const LogInViewBody(),
+      body: AuthViewBody(
+        textbutton: "Log in",
+        authtext: "Log in",
+        onPressed: () {},
+        onChangedemail: (value) {},
+        onChangedpassword: (value) {},
+      ),
     );
   }
 }

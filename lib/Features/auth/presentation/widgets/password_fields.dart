@@ -2,17 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/coustom_Textform_field.dart';
+import 'package:test_app/core/helper/coustom_Textform_field.dart';
 import 'package:test_app/core/utils/images.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
 class PassWordFieled extends StatelessWidget {
-  const PassWordFieled({super.key});
-
+  const PassWordFieled({super.key, required this.onChanged});
+  final void Function(String) onChanged;
   @override
   Widget build(BuildContext context) {
     bool obscuretext = true;
     return CoustomTextFormField(
+      onChanged: onChanged,
       obscuretext: obscuretext,
       suffix: GestureDetector(
         onTap: () {

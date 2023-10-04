@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/googleauth.dart';
+import 'package:test_app/Features/auth/presentation/widgets/googleauth.dart';
 import 'package:test_app/core/utils/images.dart';
 
 class LoginSochialMedia extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:test_app/Features/Get%20Started/presentation/views/get_started_view.dart';
-import 'package:test_app/Features/Log%20In/pesentation/views/log_in_view.dart';
 import 'package:test_app/Features/Run/presentation/views/run_view.dart';
-import 'package:test_app/Features/Sign%20Up/pesentation/views/sigin_up_view.dart';
+import 'package:test_app/Features/auth/presentation/views/log_in_view.dart';
+import 'package:test_app/Features/auth/presentation/views/sign_up_view.dart';
 import 'package:test_app/core/utils/anyscrean.dart';
 
 abstract class AppRouter {
@@ -22,7 +22,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kSignIn,
-        builder: (context, state) => const SignUpView(),
+        builder: (context, state) => SignUpView(),
       ),
       GoRoute(
         path: kLogIn,

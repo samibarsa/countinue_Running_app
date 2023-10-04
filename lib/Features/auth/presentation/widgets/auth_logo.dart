@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test_app/core/utils/background_image.dart';
 import 'package:test_app/core/utils/images.dart';
 
-class LoginLogo extends StatelessWidget {
-  const LoginLogo({
+class AuthLogo extends StatelessWidget {
+  const AuthLogo({
     super.key,
   });
 

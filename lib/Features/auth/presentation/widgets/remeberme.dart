@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/Features/Log%20In/pesentation/widgets/cosyum_checkbox.dart';
+import 'package:test_app/Features/auth/presentation/widgets/cosyum_checkbox.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
 class Remeberme extends StatelessWidget {

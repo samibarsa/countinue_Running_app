@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:test_app/Features/Get%20Started/presentation/widgets/custom_button.dart';
+import 'package:test_app/core/helper/custom_button.dart';
 import 'package:test_app/core/utils/router.dart';
 import 'package:test_app/core/utils/textstyles.dart';
 
